@@ -1,6 +1,7 @@
 A simple ASP.NET Core Web API for managing users, built as part of a three‑stage activity series using Microsoft Copilot.
 This project demonstrates CRUD operations, input validation, debugging, and middleware implementation for logging, authentication, and global error handling.
 Activities Performed
+
 Activity 1: Writing and Enhancing API Code
 In this activity, Microsoft Copilot was used to scaffold an ASP.NET Core Web API project and generate CRUD operations for user management. The API allows creating, retrieving, updating, and deleting users using RESTful endpoints, forming the core functionality of the application.
 
