@@ -1,0 +1,114 @@
+
+### ACTIVITY 1 — CRUD
+
+GET http://localhost:5210/users
+Authorization: Bearer my-secret-token
+
+###
+
+GET http://localhost:5210/users/1
+Authorization: Bearer my-secret-token
+
+###
+
+POST http://localhost:5210/users
+Authorization: Bearer my-secret-token
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "Charlie",
+  "email": "charlie@test.com"
+}
+
+###
+
+PUT http://localhost:5210/users/1
+Authorization: Bearer my-secret-token
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Alice Updated",
+  "email": "alice.updated@test.com"
+}
+
+###
+
+DELETE http://localhost:5210/users/2
+Authorization: Bearer my-secret-token
+
+### ACTIVITY 2 — DEBUGGING
+
+GET http://localhost:5210/users/-1
+Authorization: Bearer my-secret-token
+
+###
+
+POST http://localhost:5210/users
+Authorization: Bearer my-secret-token
+Content-Type: application/json
+
+{
+  "id": -4,
+  "name": "Mohan",
+  "email": "bademail"
+}
+
+###
+POST http://localhost:5210/users
+Authorization: Bearer my-secret-token
+Content-Type: application/json
+
+{
+  "id": 5,
+  "name": "Santhi",
+  "email": "invalid"
+}
+###
+POST http://localhost:5210/users
+Authorization: Bearer my-secret-token
+Content-Type: application/json
+
+{
+  "id": 4,
+  "name": "",
+  "email": "empty@test.com"
+}
+###
+POST http://localhost:5210/users
+Authorization: Bearer my-secret-token
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Duplicate User",
+  "email": "duplicate@test.com"
+}
+###
+
+PUT http://localhost:5210/users/99
+Authorization: Bearer my-secret-token
+Content-Type: application/json
+
+{
+  "id": 99,
+  "name": "Missing User",
+  "email": "missing@test.com"
+}
+
+
+
+### ACTIVITY 3 — MIDDLEWARE
+
+GET http://localhost:5210/users
+
+###
+
+GET http://localhost:5210/users
+Authorization: Bearer wrong-token
+
+###
+
+GET http://localhost:5210/users
+Authorization: Bearer my-secret-token
